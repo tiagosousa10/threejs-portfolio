@@ -13,12 +13,12 @@ camera.position.z=5;
 
 //3. object
 const geometry = new THREE.DodecahedronGeometry();
-const material= new THREE.MeshBasicMaterial({color: '#468565'})
+const material= new THREE.MeshLambertMaterial({color: '#468565', emissive: '#468565'})
 
 const dodecahedron = new THREE.Mesh(geometry, material)
 
 const boxGeometry = new THREE.BoxGeometry(2,0.1,2);
-const boxMaterial= new THREE.MeshBasicMaterial({color: '#b4b4b3'});
+const boxMaterial= new THREE.MeshStandardMaterial({color: '#b4b4b3', emissive: '#b4b4b3'});
 const box = new THREE.Mesh(boxGeometry, boxMaterial)
 box.position.y=-1.5;
 
@@ -57,5 +57,11 @@ function animate() {
 
 }
 
+//8. handle window resize
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight
+  camera.updateProjectionMatrix()
+  renderer.setSize(window.innerWidth, window.innerHeight)
+})
 
 animate()
