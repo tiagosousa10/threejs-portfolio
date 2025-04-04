@@ -9,6 +9,7 @@ import {calculateSizes} from '../constants/index.js'
 import Target from '../components/Target.jsx'
 import ReactLogo from '../components/ReactLogo.jsx'
 import Cube from '../components/Cube.jsx'
+import Rings from '../components/Rings.jsx'
 
 const Hero = () => {
    // const controls = useControls('HackerRoom',{
@@ -60,7 +61,7 @@ const Hero = () => {
    <section className="min-h-screen w-full flex flex-col relative" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
          <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
-            Hi, I am Adrian <span className="waving-hand">👋</span>
+            Hi, I am Tiago <span className="waving-hand">👋</span>
          </p>
          <p className="hero_tag text-gray_gradient">Building Products & Brands</p>
       </div>
@@ -81,6 +82,7 @@ const Hero = () => {
                <group>
                   <Target position={sizes.targetPosition}/>
                   <ReactLogo position={sizes.reactLogoPosition} />
+                  <Rings position={sizes.ringPosition} />
                   <Cube position={sizes.cubePosition} />
                </group>
 
