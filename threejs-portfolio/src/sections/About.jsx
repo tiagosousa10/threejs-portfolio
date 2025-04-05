@@ -5,7 +5,7 @@ import Button from '../components/Button'
 const About = () => {
    const [hasCopied, setHasCopied] = useState(false);
 
-
+   //copy email function
    const handleCopy = () => {
       navigator.clipboard.writeText('tiagosousa.tams@hotmail.com')
       setHasCopied(true)
@@ -15,6 +15,7 @@ const About = () => {
          setHasCopied(false)
       }, 2000 )
    }
+
 
   return (
    <section className="c-space my-20" id="about">
@@ -69,11 +70,11 @@ const About = () => {
             </div>
             <div>
               <p className="grid-headtext">I’m very flexible with time zone communications & locations</p>
-              <p className="grid-subtext">I&apos;m based in Rjieka, Croatia and open to remote work worldwide.</p>
+              <p className="grid-subtext">I&apos;m based in Porto, Portugal and open to remote work worldwide.</p>
               <Button 
                   name="Contact Me" 
                   isBeam 
-                  containerClass="w-full mt-10" 
+                  containerClass="w-full mt-10 " 
                />
             </div>
           </div>
@@ -100,9 +101,9 @@ const About = () => {
 
                <div className='copy-container' onClick={handleCopy}>
                   <img src={hasCopied ? "assets/check.svg" : "assets/copy.svg"} alt="" />
+                  <p className='lg:text-xl md:text-l font-medium text-gray_gradient text-white'>tiagosousa.tams@hotmail.com</p>
                </div>
             </div>
-
          </div>
 
         </div>
