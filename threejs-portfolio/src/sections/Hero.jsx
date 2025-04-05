@@ -75,6 +75,7 @@ const Hero = () => {
             <Suspense fallback={<CanvasLoader />}>
 
                <PerspectiveCamera makeDefault position={[0, 0, 30]} />
+               
                <HeroCamera isMobile={isMobile} >
                   <HackerRoom 
                      position={sizes.deskPosition} 
