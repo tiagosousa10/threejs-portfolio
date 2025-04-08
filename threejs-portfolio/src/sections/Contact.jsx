@@ -37,6 +37,13 @@ const Contact = () => {
          setLoading(false)
          alert('Your message has been sent. Thank you!')
 
+         //clear form
+         setForm({
+            name: '',
+            email: '',
+            message:''
+         })
+
       } catch(error) {
          setLoading(false)
          console.log(error)
